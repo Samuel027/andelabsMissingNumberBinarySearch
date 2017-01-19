@@ -25,15 +25,13 @@ class BinarySearch(list):
 
         while start <= stop and not found:
             mid = (start + stop) // 2
-            if self[mid] == value               
+            if self[mid] == value:               
                 found = True
             else:
                 count += 1
-                if value self[mid]:
+                if value < self[mid]:
                     stop = mid - 1
                 else:
                     start = mid + 1
 
         return {'count': count, 'index': mid}
-
-
